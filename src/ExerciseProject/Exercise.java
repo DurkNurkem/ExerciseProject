@@ -1,11 +1,13 @@
 package ExerciseProject;
 
+import java.text.DecimalFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 /**** Project Name: Exercise App
  ***** Created by: Ciaran McCallion
  ***** Creation date: 19/01/2024
- ***** Last edited:
+ ***** Last edited: 23/01/2024
  ***** Project description: Super class for Exercise
  *****/
 public class Exercise
@@ -46,5 +48,21 @@ public class Exercise
    {
       return bodyWeight;
    }//getBodyWeight()
+
+   protected static String createDate()
+   {
+      DecimalFormat dateFormat = new DecimalFormat("00");
+      int day, month, year;
+      String myDate;
+
+      Calendar dateTime = Calendar.getInstance();
+      day=dateTime.get(Calendar.DATE);
+      month=(dateTime.get(Calendar.MONTH))+1;
+      year=(dateTime.get(Calendar.YEAR));
+      myDate = (String)(dateFormat.format(day)+"/"+dateFormat.format(month)+"/"+year);
+
+      return myDate;
+
+   }//createDate()
 
 }//class

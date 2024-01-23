@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**** Project Name: Exercise app
  ***** Created by: Ciaran McCallion
  ***** Creation date: 21/01/2024
- ***** Last edited:
+ ***** Last edited: 23/01/2024
  ***** Project description: Switch Case methods to insure correct string inputs
  *****/
 public class SwitchCase
@@ -13,8 +13,9 @@ public class SwitchCase
 
    Scanner kb = new Scanner(System.in);
 
-   protected String chooseET() //Choose Exercise Type
+   protected static String chooseET() //Choose Exercise Type
    {
+      Scanner kb = new Scanner(System.in);
       String choice = "";
       int option;
 
@@ -48,8 +49,9 @@ public class SwitchCase
       return choice;
    }//chooseET()
 
-   protected String chooseWM() //choose free weights or machine weights
+   protected static String chooseWM() //choose free weights or machine weights
    {
+      Scanner kb = new Scanner(System.in);
       int option;
       String choice = "";
 
@@ -64,12 +66,8 @@ public class SwitchCase
 
          switch (option)
          {
-            case 1:
-               choice = "Free";
-               break;
-            case 2:
-               choice = "Machine";
-               break;
+            case 1: choice = "Free";break;
+            case 2: choice = "Machine";break;
          }//switch
       }//do
       while (option<1 || option>2);
@@ -77,8 +75,9 @@ public class SwitchCase
       return choice;
    }//chooseWM
 
-   protected String chooseWT() //choose barbell or dumbbell weights
+   protected static String chooseWT() //choose barbell or dumbbell weights
    {
+      Scanner kb = new Scanner(System.in);
       int option;
       String choice = "";
 
@@ -93,12 +92,8 @@ public class SwitchCase
 
          switch (option)
          {
-            case 1:
-               choice = "Barbell";
-               break;
-            case 2:
-               choice = "Dumbbells";
-               break;
+            case 1: choice = "Barbell";break;
+            case 2: choice = "Dumbbells";break;
          }//switch
       }//do
       while (option<1 || option>2);
